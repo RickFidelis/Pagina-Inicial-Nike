@@ -6,8 +6,12 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
-
+.main {
+    height: 100%;
+    width: 100%;
+}
 /* *********************** Header *********************** */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -48,30 +52,37 @@ header {
     color: rgb(34, 34, 34);
     font-size: 1.5rem;
     display: inline-block;
-    text-decoration: none;
+    text-decoration: dashed;
+    transition: all 0.2s;
+}
+
+.links li a:hover {
+    padding: 11px;
+    background-color: #0c0c0c;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
 }
 
 /* ************************ TEXTO ************************  */
 
 .content {
-    position: relative;
-    width: 80%;
-    height: 40%;
+    position: absolute;
+    width: 100%;
+    height: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    min-height: 30vh;
-    padding: 35px;
 }
 
 .content .textBox {
+    width: 100%;
     position: relative;
-    max-width: 600px;
-    margin-left: 80px;
+    text-align: center;
 }
 
 .content .textBox h1 {
-    font-size: 7rem;
+    font-size: 5.5rem;
     color: rgba(201, 201, 201, 0.664);
 }
 
@@ -82,19 +93,38 @@ header {
 }
 
 .content .textBox h1 span:hover {
-    font-size: 7.5rem;
+    font-size: 6rem;
 }
 
 /* ************** Imagem ************** */
 
 .content .imgShoes {
-    padding: 50px;
-    display: flex;
-    max-width: 38%;
-    position: relative; 
-    transition: all 0.4s;
+    padding: 10px;
+    width: 100%;
 }
 
-.content .imgShoes {
-    margin-left: 60px;
+.content .imgShoes img {
+    padding-left: 50px;
+    width: 70%;
+    transform: translateY(-5%);
+    transform: translateX(10%);
+    cursor: pointer;
+}
+
+/* ************** Circulo ************** */
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c0c0c;
+    clip-path: circle(600px at right 800px);
+    transition: all 0.5s;
+}
+
+.circleActive {
+    background: #777777;
+    clip-path: circle(700px at right 800px);
 }
